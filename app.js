@@ -42,6 +42,13 @@ function btnFlash(btn){
     },250)
 }
 
+function btnFlash2(btn){
+    btn.classList.add("flash2");
+    setTimeout(function(){
+        btn.classList.remove("flash2");
+    },250)
+}
+
 let allBtns = document.querySelectorAll(".btn");
 for(btn of allBtns)
 {
@@ -51,7 +58,7 @@ for(btn of allBtns)
 function btnPress(){
     console.log(this);
     let btn = this;
-    btnFlash(btn);
+    btnFlash2(btn);
 
     userColor = btn.getAttribute("id");
     userSeq.push(userColor);
